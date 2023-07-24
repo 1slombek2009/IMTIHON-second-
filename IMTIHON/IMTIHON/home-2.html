@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home-2</title>
+    <link rel="stylesheet" href="css/home-2.min.css" />
+    <link rel="stylesheet" href="../css/header.min.css">
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.4.0/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-solid.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-regular.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-light.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <style>
+      
+      #backtop {
+        width: 55px;
+        height: 55px;
+        position: fixed;
+        bottom: -50px;
+        right: 30px;
+        background-color: red;
+        border: none;
+        font-size: 25px;
+        scroll-behavior: smooth;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        transition: 0.7s;
+        -webkit-transition: 0.7s;
+        -moz-transition: 0.7s;
+        -ms-transition: 0.7s;
+        -o-transition: 0.7s;
+      }
+            .loading {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              min-height: 100vh;
+              background-color: #bb2339;
+              animation: animateBg 7s linear infinite;
+              -webkit-animation: animateBg 7s linear infinite;
+            }
+            @keyframes animateBg {
+              0% {
+                filter: hue-rotate(0deg);
+                -webkit-filter: hue-rotate(0deg);
+              }
+              100% {
+                filter: hue-rotate(360deg);
+                -webkit-filter: hue-rotate(360deg);
+              }
+            }
+      
+            .loader {
+              position: relative;
+              width: 120px;
+              height: 120px;
+            }
+      
+            span {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              transform: rotate(calc(18deg * var(--i)));
+              -webkit-transform: rotate(calc(18deg * var(--i)));
+              -moz-transform: rotate(calc(18deg * var(--i)));
+              -ms-transform: rotate(calc(18deg * var(--i)));
+              -o-transform: rotate(calc(18deg * var(--i)));
+            }
+      
+            span::before {
+              content: "";
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 15px;
+              height: 15px;
+              border-radius: 50%;
+              background-color: red;
+              box-shadow: 0 0 10px red, 0 0 20px red, 0 0 40px red, 0 0 60px red,
+                0 0 80px red, 0 0 100px red;
+              -webkit-border-radius: 50%;
+              -moz-border-radius: 50%;
+              -ms-border-radius: 50%;
+              -o-border-radius: 50%;
+            }
+      
+            .loading {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              min-height: 100vh;
+              background-color: #024002;
+              animation: animateBg 7s linear infinite;
+              -webkit-animation: animateBg 7s linear infinite;
+            }
+            @keyframes animateBg {
+              0% {
+                filter: hue-rotate(0deg);
+                -webkit-filter: hue-rotate(0deg);
+              }
+              100% {
+                filter: hue-rotate(360deg);
+                -webkit-filter: hue-rotate(360deg);
+              }
+            }
+      
+            .loader {
+              position: relative;
+              width: 120px;
+              height: 120px;
+            }
+      
+            span {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              transform: rotate(calc(18deg * var(--i)));
+              -webkit-transform: rotate(calc(18deg * var(--i)));
+              -moz-transform: rotate(calc(18deg * var(--i)));
+              -ms-transform: rotate(calc(18deg * var(--i)));
+              -o-transform: rotate(calc(18deg * var(--i)));
+            }
+      
+            span::before {
+              content: "";
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 15px;
+              height: 15px;
+              border-radius: 50%;
+              background-color: rgb(21, 255, 0);
+              box-shadow: 0 0 10px rgb(21, 255, 0), 0 0 20px rgb(21, 255, 0),
+                0 0 40px rgb(21, 255, 0), 0 0 60px rgb(21, 255, 0),
+                0 0 80px rgb(21, 255, 0), 0 0 100px rgb(21, 255, 0);
+              -webkit-border-radius: 50%;
+              -moz-border-radius: 50%;
+              -ms-border-radius: 50%;
+              -o-border-radius: 50%;
+            }
+      
+            #loading {
+              position: fixed;
+              background-color: white;
+              top: 0;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              z-index: 100;
+              transition: 0.5s;
+            }
+      
+            #loading.loading-none {
+              opacity: 0;
+              z-index: -1;
+            }
+          </style>
+  </head>
+  <body>
+    <div id="loading">
+      <div class="loader">
+          <span style="--i: 1"></span>
+          <span style="--i: 2"></span>
+          <span style="--i: 3"></span>
+          <span style="--i: 4"></span>
+          <span style="--i: 5"></span>
+          <span style="--i: 6"></span>
+          <span style="--i: 7"></span>
+          <span style="--i: 8"></span>
+          <span style="--i: 9"></span>
+          <span style="--i: 10"></span>
+          <span style="--i: 11"></span>
+          <span style="--i: 12"></span>
+          <span style="--i: 13"></span>
+          <span style="--i: 14"></span>
+          <span style="--i: 15"></span>
+          <span style="--i: 16"></span>
+          <span style="--i: 17"></span>
+          <span style="--i: 18"></span>
+          <span style="--i: 19"></span>
+          <span style="--i: 20"></span>
+        </div>
+      </div>
+    <header class="header">
+      <nav
+      class="navbar navbar-expand-md navbar-dark bg-danger fixed-top"
+      style="height: 100px"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="#"
+          ><img src="images/image 2 (1).png" alt=""
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasDarkNavbar"
+          aria-controls="offcanvasDarkNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-start text-bg-danger"
+          tabindex="-1"
+          id="offcanvasDarkNavbar"
+          aria-labelledby="offcanvasDarkNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">
+              <img src="images/image 2 (1).png" alt="" />
+            </h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="about-us.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="home-2.html"
+                  >Menu</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="news.html"
+                  >News</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="home.html"
+                  >About Us</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="contact-us.html"
+                  >Contact Us</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Log In</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    </header>
+    <main class="main">
+      <section class="main__ap-tab container">
+        <div class="ap-tab">
+          <h1 class="ap-tab-h1">Our Regular Menu Pack</h1>
+          <ul class="ap-tab-list">
+            <li class="ap-tab-item">
+              <a class="ap-tab-link" href="#">All</a>
+            </li>
+            <li class="ap-tab-item">
+              <a class="ap-tab-link" href="#">KEBABS</a>
+            </li>
+            <li class="ap-tab-item">
+              <a class="ap-tab-link" href="#">PIDES</a>
+            </li>
+            <li class="ap-tab-item">
+              <a class="ap-tab-link" href="#">BURGERS</a>
+            </li>
+            <li class="ap-tab-item">
+              <a class="ap-tab-link" href="#">OTHER DISHES</a>
+            </li>
+            <li class="ap-tab-item">
+              <a class="ap-tab-link" href="#">SIDES</a>
+            </li>
+            <li class="ap-tab-item">
+              <a class="ap-tab-link" href="#">DRINKS</a>
+            </li>
+            <li class="ap-tab-item">
+              <a class="ap-tab-link" href="#">DESSERTS</a>
+            </li>
+            <li class="ap-tab-item">
+              <a class="ap-tab-link" href="#">MEAL DEALS</a>
+            </li>
+          </ul>
+        </div>
+        <div class="ap-tab-container">
+          <div class="ap-tab-content">
+            <div class="main__ap-tab-content-card">
+              <img src="images/home/1.png" alt="" />
+              <h4 class="main__ap-tab-content-card-h4">
+                Barbecue Shish kebab Shashlik Skewer
+              </h4>
+              <p class="main__ap-tab-content-card-p">$12.00</p>
+            </div>
+            <div class="main__ap-tab-content-card">
+              <img src="images/home/1.png" alt="" />
+              <h4 class="main__ap-tab-content-card-h4">
+                Barbecue Shish kebab Shashlik Skewer
+              </h4>
+              <p class="main__ap-tab-content-card-p">$12.00</p>
+            </div>
+            <div class="main__ap-tab-content-card">
+              <img src="images/home/1.png" alt="" />
+              <h4 class="main__ap-tab-content-card-h4">
+                Barbecue Shish kebab Shashlik Skewer
+              </h4>
+              <p class="main__ap-tab-content-card-p">$12.00</p>
+            </div>
+            <div class="main__ap-tab-content-card">
+              <img src="images/home/1.png" alt="" />
+              <h4 class="main__ap-tab-content-card-h4">
+                Barbecue Shish kebab Shashlik Skewer
+              </h4>
+              <p class="main__ap-tab-content-card-p">$12.00</p>
+            </div>
+            <div class="main__ap-tab-content-card">
+              <img src="images/home/1.png" alt="" />
+              <h4 class="main__ap-tab-content-card-h4">
+                Barbecue Shish kebab Shashlik Skewer
+              </h4>
+              <p class="main__ap-tab-content-card-p">$12.00</p>
+            </div>
+            <div class="main__ap-tab-content-card">
+              <img src="images/home/1.png" alt="" />
+              <h4 class="main__ap-tab-content-card-h4">
+                Barbecue Shish kebab Shashlik Skewer
+              </h4>
+              <p class="main__ap-tab-content-card-p">$12.00</p>
+            </div>
+            <div class="main__ap-tab-content-card">
+              <img src="images/home/1.png" alt="" />
+              <h4 class="main__ap-tab-content-card-h4">
+                Barbecue Shish kebab Shashlik Skewer
+              </h4>
+              <p class="main__ap-tab-content-card-p">$12.00</p>
+            </div>
+            <div class="main__ap-tab-content-card">
+              <img src="images/home/1.png" alt="" />
+              <h4 class="main__ap-tab-content-card-h4">
+                Barbecue Shish kebab Shashlik Skewer
+              </h4>
+              <p class="main__ap-tab-content-card-p">$12.00</p>
+            </div>
+            <div class="main__ap-tab-content-card">
+              <img src="images/home/1.png" alt="" />
+              <h4 class="main__ap-tab-content-card-h4">
+                Barbecue Shish kebab Shashlik Skewer
+              </h4>
+              <p class="main__ap-tab-content-card-p">$12.00</p>
+            </div>
+            <div class="main__ap-tab-content-card">
+              <img src="images/home/1.png" alt="" />
+              <h4 class="main__ap-tab-content-card-h4">
+                Barbecue Shish kebab Shashlik Skewer
+              </h4>
+              <p class="main__ap-tab-content-card-p">$12.00</p>
+            </div>
+            <div class="main__ap-tab-content-card">
+              <img src="images/home/1.png" alt="" />
+              <h4 class="main__ap-tab-content-card-h4">
+                Barbecue Shish kebab Shashlik Skewer
+              </h4>
+              <p class="main__ap-tab-content-card-p">$12.00</p>
+            </div>
+            <div class="main__ap-tab-content-card">
+              <img src="images/home/1.png" alt="" />
+              <h4 class="main__ap-tab-content-card-h4">
+                Barbecue Shish kebab Shashlik Skewer
+              </h4>
+              <p class="main__ap-tab-content-card-p">$12.00</p>
+            </div>
+          </div>
+          <div class="ap-tab-content">
+            <div class="main__ap-tab-content-card">
+              <img src="images/home/1.png" alt="" />
+              <h4 class="main__ap-tab-content-card-h4">
+                Barbecue Shish kebab Shashlik Skewer
+              </h4>
+              <p class="main__ap-tab-content-card-p">$12.00</p>
+            </div>
+            <div class="main__ap-tab-content-card">
+              <img src="images/home/1.png" alt="" />
+              <h4 class="main__ap-tab-content-card-h4">
+                Barbecue Shish kebab Shashlik Skewer
+              </h4>
+              <p class="main__ap-tab-content-card-p">$12.00</p>
+            </div>
+            <div class="main__ap-tab-content-card">
+              <img src="images/home/1.png" alt="" />
+              <h4 class="main__ap-tab-content-card-h4">
+                Barbecue Shish kebab Shashlik Skewer
+              </h4>
+              <p class="main__ap-tab-content-card-p">$12.00</p>
+            </div>
+            <div class="main__ap-tab-content-card">
+              <img src="images/home/1.png" alt="" />
+              <h4 class="main__ap-tab-content-card-h4">
+                Barbecue Shish kebab Shashlik Skewer
+              </h4>
+              <p class="main__ap-tab-content-card-p">$12.00</p>
+            </div>
+          </div>
+          <div class="ap-tab-content">
+            <div class="main__ap-tab-content-card">
+              <img src="images/home/1.png" alt="" />
+              <h4 class="main__ap-tab-content-card-h4">
+                Barbecue Shish kebab Shashlik Skewer
+              </h4>
+              <p class="main__ap-tab-content-card-p">$12.00</p>
+            </div>
+            <div class="main__ap-tab-content-card">
+              <img src="images/home/1.png" alt="" />
+              <h4 class="main__ap-tab-content-card-h4">
+                Barbecue Shish kebab Shashlik Skewer
+              </h4>
+              <p class="main__ap-tab-content-card-p">$12.00</p>
+            </div>
+            <div class="main__ap-tab-content-card">
+              <img src="images/home/1.png" alt="" />
+              <h4 class="main__ap-tab-content-card-h4">
+                Barbecue Shish kebab Shashlik Skewer
+              </h4>
+              <p class="main__ap-tab-content-card-p">$12.00</p>
+            </div>
+            <div class="main__ap-tab-content-card">
+              <img src="images/home/1.png" alt="" />
+              <h4 class="main__ap-tab-content-card-h4">
+                Barbecue Shish kebab Shashlik Skewer
+              </h4>
+              <p class="main__ap-tab-content-card-p">$12.00</p>
+            </div>
+          </div>
+          <div class="ap-tab-content">
+            <div class="main__ap-tab-content-card">
+              <img src="images/home/1.png" alt="" />
+              <h4 class="main__ap-tab-content-card-h4">
+                Barbecue Shish kebab Shashlik Skewer
+              </h4>
+              <p class="main__ap-tab-content-card-p">$12.00</p>
+            </div>
+            <div class="main__ap-tab-content-card">
+              <img src="images/home/1.png" alt="" />
+              <h4 class="main__ap-tab-content-card-h4">
+                Barbecue Shish kebab Shashlik Skewer
+              </h4>
+              <p class="main__ap-tab-content-card-p">$12.00</p>
+            </div>
+            <div class="main__ap-tab-content-card">
+              <img src="images/home/1.png" alt="" />
+              <h4 class="main__ap-tab-content-card-h4">
+                Barbecue Shish kebab Shashlik Skewer
+              </h4>
+              <p class="main__ap-tab-content-card-p">$12.00</p>
+            </div>
+            <div class="main__ap-tab-content-card">
+              <img src="images/home/1.png" alt="" />
+              <h4 class="main__ap-tab-content-card-h4">
+                Barbecue Shish kebab Shashlik Skewer
+              </h4>
+              <p class="main__ap-tab-content-card-p">$12.00</p>
+            </div>
+          </div>
+          <div class="ap-tab-content">
+            <div class="main__ap-tab-content-card">
+              <img src="images/home/1.png" alt="" />
+              <h4 class="main__ap-tab-content-card-h4">
+                Barbecue Shish kebab Shashlik Skewer
+              </h4>
+              <p class="main__ap-tab-content-card-p">$12.00</p>
+            </div>
+            <div class="main__ap-tab-content-card">
+              <img src="images/home/1.png" alt="" />
+              <h4 class="main__ap-tab-content-card-h4">
+                Barbecue Shish kebab Shashlik Skewer
+              </h4>
+              <p class="main__ap-tab-content-card-p">$12.00</p>
+            </div>
+            <div class="main__ap-tab-content-card">
+              <img src="images/home/1.png" alt="" />
+              <h4 class="main__ap-tab-content-card-h4">
+                Barbecue Shish kebab Shashlik Skewer
+              </h4>
+              <p class="main__ap-tab-content-card-p">$12.00</p>
+            </div>
+            <div class="main__ap-tab-content-card">
+              <img src="images/home/1.png" alt="" />
+              <h4 class="main__ap-tab-content-card-h4">
+                Barbecue Shish kebab Shashlik Skewer
+              </h4>
+              <p class="main__ap-tab-content-card-p">$12.00</p>
+            </div>
+          </div>
+          <div class="ap-tab-content">
+            <div class="main__ap-tab-content-card">
+              <img src="images/home/1.png" alt="" />
+              <h4 class="main__ap-tab-content-card-h4">
+                Barbecue Shish kebab Shashlik Skewer
+              </h4>
+              <p class="main__ap-tab-content-card-p">$12.00</p>
+            </div>
+            <div class="main__ap-tab-content-card">
+              <img src="images/home/1.png" alt="" />
+              <h4 class="main__ap-tab-content-card-h4">
+                Barbecue Shish kebab Shashlik Skewer
+              </h4>
+              <p class="main__ap-tab-content-card-p">$12.00</p>
+            </div>
+            <div class="main__ap-tab-content-card">
+              <img src="images/home/1.png" alt="" />
+              <h4 class="main__ap-tab-content-card-h4">
+                Barbecue Shish kebab Shashlik Skewer
+              </h4>
+              <p class="main__ap-tab-content-card-p">$12.00</p>
+            </div>
+            <div class="main__ap-tab-content-card">
+              <img src="images/home/1.png" alt="" />
+              <h4 class="main__ap-tab-content-card-h4">
+                Barbecue Shish kebab Shashlik Skewer
+              </h4>
+              <p class="main__ap-tab-content-card-p">$12.00</p>
+            </div>
+          </div>
+          <div class="ap-tab-content">
+            <div class="main__ap-tab-content-card">
+              <img src="images/home/1.png" alt="" />
+              <h4 class="main__ap-tab-content-card-h4">
+                Barbecue Shish kebab Shashlik Skewer
+              </h4>
+              <p class="main__ap-tab-content-card-p">$12.00</p>
+            </div>
+            <div class="main__ap-tab-content-card">
+              <img src="images/home/1.png" alt="" />
+              <h4 class="main__ap-tab-content-card-h4">
+                Barbecue Shish kebab Shashlik Skewer
+              </h4>
+              <p class="main__ap-tab-content-card-p">$12.00</p>
+            </div>
+            <div class="main__ap-tab-content-card">
+              <img src="images/home/1.png" alt="" />
+              <h4 class="main__ap-tab-content-card-h4">
+                Barbecue Shish kebab Shashlik Skewer
+              </h4>
+              <p class="main__ap-tab-content-card-p">$12.00</p>
+            </div>
+            <div class="main__ap-tab-content-card">
+              <img src="images/home/1.png" alt="" />
+              <h4 class="main__ap-tab-content-card-h4">
+                Barbecue Shish kebab Shashlik Skewer
+              </h4>
+              <p class="main__ap-tab-content-card-p">$12.00</p>
+            </div>
+          </div>
+          <div class="ap-tab-content">
+            <div class="main__ap-tab-content-card">
+              <img src="images/home/1.png" alt="" />
+              <h4 class="main__ap-tab-content-card-h4">
+                Barbecue Shish kebab Shashlik Skewer
+              </h4>
+              <p class="main__ap-tab-content-card-p">$12.00</p>
+            </div>
+            <div class="main__ap-tab-content-card">
+              <img src="images/home/1.png" alt="" />
+              <h4 class="main__ap-tab-content-card-h4">
+                Barbecue Shish kebab Shashlik Skewer
+              </h4>
+              <p class="main__ap-tab-content-card-p">$12.00</p>
+            </div>
+            <div class="main__ap-tab-content-card">
+              <img src="images/home/1.png" alt="" />
+              <h4 class="main__ap-tab-content-card-h4">
+                Barbecue Shish kebab Shashlik Skewer
+              </h4>
+              <p class="main__ap-tab-content-card-p">$12.00</p>
+            </div>
+            <div class="main__ap-tab-content-card">
+              <img src="images/home/1.png" alt="" />
+              <h4 class="main__ap-tab-content-card-h4">
+                Barbecue Shish kebab Shashlik Skewer
+              </h4>
+              <p class="main__ap-tab-content-card-p">$12.00</p>
+            </div>
+          </div>
+          <div class="ap-tab-content">
+            <div class="main__ap-tab-content-card">
+              <img src="images/home/1.png" alt="" />
+              <h4 class="main__ap-tab-content-card-h4">
+                Barbecue Shish kebab Shashlik Skewer
+              </h4>
+              <p class="main__ap-tab-content-card-p">$12.00</p>
+            </div>
+            <div class="main__ap-tab-content-card">
+              <img src="images/home/1.png" alt="" />
+              <h4 class="main__ap-tab-content-card-h4">
+                Barbecue Shish kebab Shashlik Skewer
+              </h4>
+              <p class="main__ap-tab-content-card-p">$12.00</p>
+            </div>
+            <div class="main__ap-tab-content-card">
+              <img src="images/home/1.png" alt="" />
+              <h4 class="main__ap-tab-content-card-h4">
+                Barbecue Shish kebab Shashlik Skewer
+              </h4>
+              <p class="main__ap-tab-content-card-p">$12.00</p>
+            </div>
+            <div class="main__ap-tab-content-card">
+              <img src="images/home/1.png" alt="" />
+              <h4 class="main__ap-tab-content-card-h4">
+                Barbecue Shish kebab Shashlik Skewer
+              </h4>
+              <p class="main__ap-tab-content-card-p">$12.00</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="main__gallery">
+        <div class="main__gallery-wrapper">
+          <div class="main__gallery-wrapper-left">
+            <h4 class="main__gallery-wrapper-left-h4">Instagram</h4>
+            <img src="images/home/Vector (40).png" alt="no" />
+            <h2 class="main__gallery-wrapper-left-h2">Photo Gallery</h2>
+            <p class="main__gallery-wrapper-left-p">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat
+              mattis ipsum turpis elit elit scelerisque egestas mu.
+            </p>
+            <button class="main__gallery-wrapper-left-btn">View More</button>
+          </div>
+          <div class="main__gallery-wrapper-right">
+            <div class="owl-carousel owl-theme">
+              <div class="main__gallery-wrapper-right-card">
+                <div class="main__gallery-wrapper-right-card-body">
+                  <img src="images/home/f.png" alt="" />
+                </div>
+                <div class="main__gallery-wrapper-right-card-text">
+                  <img src="images/home/Vector (41).png" alt="" />
+                </div>
+              </div>
+              <div class="main__gallery-wrapper-right-card">
+                <div class="main__gallery-wrapper-right-card-body">
+                  <img
+                    src="images/home/pexels-prem-pal-singh-tanwar-602750 1.png"
+                    style="border-radius: 15px"
+                    alt=""
+                  />
+                </div>
+                <div class="main__gallery-wrapper-right-card-text">
+                  <img src="./images/home/Vector (41).png" alt="" />
+                </div>
+              </div>
+              <div class="main__gallery-wrapper-right-card">
+                <div class="main__gallery-wrapper-right-card-body">
+                  <img src="images/home/t.png" alt="" />
+                </div>
+                <div class="main__gallery-wrapper-right-card-text">
+                  <img src="images/home/Vector (41).png" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <button id="backtop">
+      <a href="#">▲</a>
+    </button>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+      integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/gh/abdulazizcreator/ap-tab/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+      integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+      integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/gh/abdulazizcreator/ap-tab/main.js"></script>
+    <script src="js/loading.js"></script>
+    <script src="js/backtop.js"></script>
+  </body>
+</html>
